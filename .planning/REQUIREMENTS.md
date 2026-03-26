@@ -65,25 +65,25 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| FOUND-01 | Pending | Pending |
-| FOUND-02 | Pending | Pending |
-| FOUND-03 | Pending | Pending |
-| FOUND-04 | Pending | Pending |
-| FOUND-05 | Pending | Pending |
-| SHORT-01 | Pending | Pending |
-| SHORT-02 | Pending | Pending |
-| SHORT-03 | Pending | Pending |
-| SHORT-04 | Pending | Pending |
-| SHORT-05 | Pending | Pending |
-| REDIR-01 | Pending | Pending |
-| REDIR-02 | Pending | Pending |
-| REDIR-03 | Pending | Pending |
+| FOUND-01 | Phase 1 | Pending |
+| FOUND-02 | Phase 1 | Pending |
+| FOUND-03 | Phase 1 | Pending |
+| FOUND-04 | Phase 1 | Pending |
+| FOUND-05 | Phase 1 | Pending |
+| SHORT-01 | Phase 2 | Pending |
+| SHORT-02 | Phase 2 | Pending |
+| SHORT-03 | Phase 2 | Pending |
+| SHORT-04 | Phase 2 | Pending |
+| SHORT-05 | Phase 2 | Pending |
+| REDIR-01 | Phase 2 | Pending |
+| REDIR-02 | Phase 2 | Pending |
+| REDIR-03 | Phase 2 | Pending |
 
 **Coverage:**
 - v1 requirements: 13 total
-- Mapped to phases: 0
-- Unmapped: 13 ⚠️
+- Mapped to phases: 13
+- Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-03-26*
-*Last updated: 2026-03-26 after initial definition*
+*Last updated: 2026-03-26 after roadmap creation*
