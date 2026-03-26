@@ -34,7 +34,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 4 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Bootstrap Flutter project with all v1 dependencies and minimal app skeleton
+- [x] 01-01-PLAN.md — Bootstrap Flutter project with all v1 dependencies and minimal app skeleton
 - [ ] 01-02-PLAN.md — Drift database schema (Urls table, UrlDao) with stable path via path_provider
 - [ ] 01-03-PLAN.md — ServerController with port-scan fallback (8080→8082) and clean shutdown
 - [ ] 01-04-PLAN.md — Wire server + DB into main.dart, AppLifecycleListener shutdown, FoundationScreen UI

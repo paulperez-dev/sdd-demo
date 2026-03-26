@@ -9,7 +9,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Foundation
 
-- [ ] **FOUND-01**: Flutter desktop app arranca y muestra una ventana funcional
+- [x] **FOUND-01**: Flutter desktop app arranca y muestra una ventana funcional
 - [ ] **FOUND-02**: Servidor HTTP embebido arranca automáticamente con la app en un puerto local
 - [ ] **FOUND-03**: Servidor se detiene limpiamente al cerrar la app
 - [ ] **FOUND-04**: Si el puerto por defecto está ocupado, el servidor usa un puerto alternativo
@@ -65,7 +65,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| FOUND-01 | Phase 1 | Pending |
+| FOUND-01 | Phase 1 | Complete |
 | FOUND-02 | Phase 1 | Pending |
 | FOUND-03 | Phase 1 | Pending |
 | FOUND-04 | Phase 1 | Pending |
