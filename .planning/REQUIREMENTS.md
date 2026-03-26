@@ -10,10 +10,10 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Foundation
 
 - [x] **FOUND-01**: Flutter desktop app arranca y muestra una ventana funcional
-- [ ] **FOUND-02**: Servidor HTTP embebido arranca automáticamente con la app en un puerto local
-- [ ] **FOUND-03**: Servidor se detiene limpiamente al cerrar la app
-- [ ] **FOUND-04**: Si el puerto por defecto está ocupado, el servidor usa un puerto alternativo
-- [ ] **FOUND-05**: Base de datos SQLite se crea en una ubicación estable (no CWD)
+- [x] **FOUND-02**: Servidor HTTP embebido arranca automáticamente con la app en un puerto local
+- [x] **FOUND-03**: Servidor se detiene limpiamente al cerrar la app
+- [x] **FOUND-04**: Si el puerto por defecto está ocupado, el servidor usa un puerto alternativo
+- [x] **FOUND-05**: Base de datos SQLite se crea en una ubicación estable (no CWD)
 
 ### URL Shortening
 
@@ -66,10 +66,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | FOUND-01 | Phase 1 | Complete |
-| FOUND-02 | Phase 1 | Pending |
-| FOUND-03 | Phase 1 | Pending |
-| FOUND-04 | Phase 1 | Pending |
-| FOUND-05 | Phase 1 | Pending |
+| FOUND-02 | Phase 1 | Complete |
+| FOUND-03 | Phase 1 | Complete |
+| FOUND-04 | Phase 1 | Complete |
+| FOUND-05 | Phase 1 | Complete |
 | SHORT-01 | Phase 2 | Pending |
 | SHORT-02 | Phase 2 | Pending |
 | SHORT-03 | Phase 2 | Pending |
