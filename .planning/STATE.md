@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: Ready to execute
-stopped_at: Completed 01-foundation 01-01-PLAN.md — Flutter project bootstrapped, pubspec.yaml with drift 2.31.0 + shelf 1.4.2, app skeleton in place
-last_updated: "2026-03-26T22:31:30.371Z"
+stopped_at: Completed 01-foundation 01-03-PLAN.md — ServerController implemented with loopback binding, port-scan fallback, force-close shutdown, and statusStream
+last_updated: "2026-03-26T22:36:27.347Z"
 progress:
   total_phases: 2
   completed_phases: 0
   total_plans: 4
-  completed_plans: 1
+  completed_plans: 2
 ---
 
 # Project State
@@ -24,7 +24,7 @@ See: .planning/PROJECT.md (updated 2026-03-26)
 ## Current Position
 
 Phase: 01 (foundation) — EXECUTING
-Plan: 2 of 4
+Plan: 3 of 4
 
 ## Performance Metrics
 
@@ -47,6 +47,7 @@ Plan: 2 of 4
 
 *Updated after each plan completion*
 | Phase 01-foundation P01 | 15 | 2 tasks | 4 files |
+| Phase 01-foundation P01-03 | 2 | 1 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -60,6 +61,8 @@ Recent decisions affecting current work:
 - Init: shelf + shelf_router for HTTP layer; background Isolate to keep server off UI event loop
 - [Phase 01-foundation]: Drift/drift_dev downgraded from 2.32.1 to 2.31.0 and drift_flutter from 0.3.0 to 0.2.8 due to Dart 3.7.2 SDK incompatibility (Flutter 3.29.2 installed)
 - [Phase 01-foundation]: SDK constraint set to ^3.7.2 to match installed Flutter 3.29.2 / Dart 3.7.2
+- [Phase 01-foundation]: Doc comment uses [slug] instead of <slug> to avoid unintended_html_in_doc_comment lint
+- [Phase 01-foundation]: No Isolate.spawn for server — shelf_io is non-blocking async, isolate adds complexity with no benefit for localhost traffic
 
 ### Pending Todos
 
@@ -71,6 +74,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-26T22:31:30.368Z
-Stopped at: Completed 01-foundation 01-01-PLAN.md — Flutter project bootstrapped, pubspec.yaml with drift 2.31.0 + shelf 1.4.2, app skeleton in place
+Last session: 2026-03-26T22:36:27.278Z
+Stopped at: Completed 01-foundation 01-03-PLAN.md — ServerController implemented with loopback binding, port-scan fallback, force-close shutdown, and statusStream
 Resume file: None
