@@ -1,0 +1,28 @@
+name: sdd_demo
+description: Local URL shortener — Flutter desktop app with embedded HTTP server.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  shelf: ^1.4.2
+  shelf_router: ^1.1.4
+  drift: ^2.31.0
+  drift_flutter: ^0.2.8
+  window_manager: ^0.5.1
+  url_launcher: ^6.3.2
+  path_provider: ^2.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  drift_dev: ^2.31.0
+  build_runner: ^2.4.0
+
+flutter:
+  uses-material-design: true
