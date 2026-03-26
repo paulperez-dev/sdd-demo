@@ -2,14 +2,14 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: Ready to execute
-stopped_at: Completed 01-foundation 01-02-PLAN.md — Drift schema (AppDatabase + UrlDao) with WAL mode, generated code, flutter analyze clean
-last_updated: "2026-03-26T22:42:38.134Z"
+status: Phase complete — ready for verification
+stopped_at: Completed 01-foundation 01-04-PLAN.md — Phase 1 Foundation wiring complete; server + DB integrated, FoundationScreen shows live port, human verification passed
+last_updated: "2026-03-26T23:15:45.202Z"
 progress:
   total_phases: 2
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 4
-  completed_plans: 3
+  completed_plans: 4
 ---
 
 # Project State
@@ -49,6 +49,7 @@ Plan: 4 of 4
 | Phase 01-foundation P01 | 15 | 2 tasks | 4 files |
 | Phase 01-foundation P01-03 | 2 | 1 tasks | 1 files |
 | Phase 01-foundation P02 | 8 | 2 tasks | 6 files |
+| Phase 01-foundation P04 | 35 | 2 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -66,6 +67,9 @@ Recent decisions affecting current work:
 - [Phase 01-foundation]: No Isolate.spawn for server — shelf_io is non-blocking async, isolate adds complexity with no benefit for localhost traffic
 - [Phase 01-foundation]: NativeDatabase must be imported from package:drift/native.dart (not drift_flutter) when using drift_flutter 0.2.8
 - [Phase 01-foundation]: path package must be declared as explicit direct dependency in pubspec.yaml when imported in source files
+- [Phase 01-foundation]: AppLifecycleListener used for server/db shutdown — widget dispose() unreliable on Flutter desktop (flutter/flutter#113220)
+- [Phase 01-foundation]: serverController.start() called before runApp so bound port is known on first UI frame
+- [Phase 01-foundation]: FoundationScreen uses serverController.port (not hardcoded 8080) to correctly reflect port fallback in UI
 
 ### Pending Todos
 
@@ -77,6 +81,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-26T22:42:38.128Z
-Stopped at: Completed 01-foundation 01-02-PLAN.md — Drift schema (AppDatabase + UrlDao) with WAL mode, generated code, flutter analyze clean
+Last session: 2026-03-26T23:15:45.198Z
+Stopped at: Completed 01-foundation 01-04-PLAN.md — Phase 1 Foundation wiring complete; server + DB integrated, FoundationScreen shows live port, human verification passed
 Resume file: None

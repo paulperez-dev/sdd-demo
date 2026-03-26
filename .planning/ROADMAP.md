@@ -37,7 +37,7 @@ Plans:
 - [x] 01-01-PLAN.md — Bootstrap Flutter project with all v1 dependencies and minimal app skeleton
 - [x] 01-02-PLAN.md — Drift database schema (Urls table, UrlDao) with stable path via path_provider
 - [x] 01-03-PLAN.md — ServerController with port-scan fallback (8080→8082) and clean shutdown
-- [ ] 01-04-PLAN.md — Wire server + DB into main.dart, AppLifecycleListener shutdown, FoundationScreen UI
+- [x] 01-04-PLAN.md — Wire server + DB into main.dart, AppLifecycleListener shutdown, FoundationScreen UI
 
 **UI hint**: yes
 
@@ -65,5 +65,5 @@ Phases execute in numeric order: 1 → 2
 
 | Phase            | Plans Complete | Status      | Completed |
 | ---------------- | -------------- | ----------- | --------- |
-| 1. Foundation    | 0/4            | Not started | -         |
+| 1. Foundation    | 4/4 | Complete   | 2026-03-26 |
 | 2. URL Shortener | 0/?            | Not started | -         |
