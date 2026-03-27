@@ -19,15 +19,15 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [x] **SHORT-01**: Usuario puede pegar una URL larga en un campo de texto y enviarla
 - [x] **SHORT-02**: El sistema genera un slug corto único para la URL
-- [ ] **SHORT-03**: La URL original y el slug se persisten en SQLite
+- [x] **SHORT-03**: La URL original y el slug se persisten en SQLite
 - [x] **SHORT-04**: La app muestra la URL corta completa (localhost:puerto/slug) al usuario
 - [ ] **SHORT-05**: Las URLs persisten entre reinicios de la app
 
 ### Redirect
 
-- [ ] **REDIR-01**: Al visitar la URL corta en un navegador, redirige a la URL original
-- [ ] **REDIR-02**: La redirección usa HTTP 302 (no 301) para evitar caching permanente del navegador
-- [ ] **REDIR-03**: Si el slug no existe, el servidor responde con 404
+- [x] **REDIR-01**: Al visitar la URL corta en un navegador, redirige a la URL original
+- [x] **REDIR-02**: La redirección usa HTTP 302 (no 301) para evitar caching permanente del navegador
+- [x] **REDIR-03**: Si el slug no existe, el servidor responde con 404
 
 ## v2 Requirements
 
@@ -72,12 +72,12 @@ Which phases cover which requirements. Updated during roadmap creation.
 | FOUND-05 | Phase 1 | Complete |
 | SHORT-01 | Phase 2 | Complete |
 | SHORT-02 | Phase 2 | Complete |
-| SHORT-03 | Phase 2 | Pending |
+| SHORT-03 | Phase 2 | Complete |
 | SHORT-04 | Phase 2 | Complete |
 | SHORT-05 | Phase 2 | Pending |
-| REDIR-01 | Phase 2 | Pending |
-| REDIR-02 | Phase 2 | Pending |
-| REDIR-03 | Phase 2 | Pending |
+| REDIR-01 | Phase 2 | Complete |
+| REDIR-02 | Phase 2 | Complete |
+| REDIR-03 | Phase 2 | Complete |
 
 **Coverage:**
 - v1 requirements: 13 total

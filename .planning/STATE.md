@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: Ready to execute
-stopped_at: "Completed 02-url-shortener 02-03-PLAN.md — ShortenerScreen UI with dart:io HttpClient POST /shorten and copy-to-clipboard"
-last_updated: "2026-03-27T11:49:31.162Z"
+stopped_at: Completed 02-url-shortener 02-02-PLAN.md — HTTP route handlers, updateSlug, ServerController wiring
+last_updated: "2026-03-27T11:54:40.751Z"
 progress:
   total_phases: 2
   completed_phases: 1
   total_plans: 8
-  completed_plans: 6
+  completed_plans: 7
 ---
 
 # Project State
@@ -24,7 +24,7 @@ See: .planning/PROJECT.md (updated 2026-03-26)
 ## Current Position
 
 Phase: 02 (url-shortener) — EXECUTING
-Plan: 3 of 4
+Plan: 4 of 4
 
 ## Performance Metrics
 
@@ -52,6 +52,7 @@ Plan: 3 of 4
 | Phase 01-foundation P04 | 35 | 2 tasks | 3 files |
 | Phase 02-url-shortener P01 | 1 | 1 tasks | 1 files |
 | Phase 02-url-shortener P03 | 2 | 1 tasks | 1 files |
+| Phase 02-url-shortener P02 | 6 | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -74,6 +75,9 @@ Recent decisions affecting current work:
 - [Phase 01-foundation]: FoundationScreen uses serverController.port (not hardcoded 8080) to correctly reflect port fallback in UI
 - [Phase 02-url-shortener]: SlugGenerator is pure Dart with no imports — deterministic base62 encoding of SQLite row IDs, zero-padded to 6 chars
 - [Phase 02-url-shortener]: Used dart:io HttpClient directly for POST /shorten in ShortenerScreen — http package not in pubspec.yaml; in-process localhost call needs no external package
+- [Phase 02-url-shortener]: shelf_router/params context injection: request.change(context: {'shelf_router/params': {'slug': slug}}) — shelf Request.change has no params param
+- [Phase 02-url-shortener]: insert-placeholder slug then updateSlug pattern ensures collision-free base62 slugs without SELECT-before-INSERT
+- [Phase 02-url-shortener]: 302 not 301 for slug redirects to prevent browser caching of mappings (Pitfall 5)
 
 ### Pending Todos
 
@@ -85,6 +89,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-27T11:49:31.158Z
-Stopped at: Completed 02-url-shortener 02-03-PLAN.md — ShortenerScreen UI with dart:io HttpClient POST /shorten and copy-to-clipboard
+Last session: 2026-03-27T11:54:40.747Z
+Stopped at: Completed 02-url-shortener 02-02-PLAN.md — HTTP route handlers, updateSlug, ServerController wiring
 Resume file: None
