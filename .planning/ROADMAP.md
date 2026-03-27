@@ -53,7 +53,13 @@ Plans:
 3. Short URLs created in one session are still functional after restarting the app
 4. Visiting a short URL that does not exist returns a 404 response in the browser
 
-**Plans**: TBD
+**Plans**: 4 plans
+
+Plans:
+- [ ] 02-01-PLAN.md — SlugGenerator utility: base62 encoding of SQLite row ID (6-char, collision-free)
+- [ ] 02-02-PLAN.md — HTTP handlers (POST /shorten + GET /<slug>) and ServerController route wiring
+- [ ] 02-03-PLAN.md — ShortenerScreen UI: text input, Shorten button, short URL result display
+- [ ] 02-04-PLAN.md — Wire main.dart + app.dart, replace FoundationScreen, human verify end-to-end
 
 **UI hint**: yes
 
@@ -66,4 +72,4 @@ Phases execute in numeric order: 1 → 2
 | Phase            | Plans Complete | Status      | Completed |
 | ---------------- | -------------- | ----------- | --------- |
 | 1. Foundation    | 4/4 | Complete   | 2026-03-26 |
-| 2. URL Shortener | 0/?            | Not started | -         |
+| 2. URL Shortener | 0/4            | Not started | -         |
