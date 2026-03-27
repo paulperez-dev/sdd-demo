@@ -3,7 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'server/server_controller.dart';
 import 'db/database.dart';
-import 'ui/foundation_screen.dart';
+import 'ui/shortener_screen.dart';
 
 class App extends StatefulWidget {
   final ServerController serverController;
@@ -52,7 +52,7 @@ class _AppState extends State<App> {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
         useMaterial3: true,
       ),
-      home: FoundationScreen(serverController: widget.serverController),
+      home: ShortenerScreen(serverController: widget.serverController),
     );
   }
 }
