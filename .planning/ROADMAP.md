@@ -56,7 +56,7 @@ Plans:
 **Plans**: 4 plans
 
 Plans:
-- [ ] 02-01-PLAN.md — SlugGenerator utility: base62 encoding of SQLite row ID (6-char, collision-free)
+- [x] 02-01-PLAN.md — SlugGenerator utility: base62 encoding of SQLite row ID (6-char, collision-free)
 - [ ] 02-02-PLAN.md — HTTP handlers (POST /shorten + GET /<slug>) and ServerController route wiring
 - [ ] 02-03-PLAN.md — ShortenerScreen UI: text input, Shorten button, short URL result display
 - [ ] 02-04-PLAN.md — Wire main.dart + app.dart, replace FoundationScreen, human verify end-to-end

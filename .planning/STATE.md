@@ -2,14 +2,14 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: Ready to plan
-stopped_at: Completed 01-foundation 01-04-PLAN.md — Phase 1 Foundation wiring complete; server + DB integrated, FoundationScreen shows live port, human verification passed
-last_updated: "2026-03-27T03:10:42.388Z"
+status: Ready to execute
+stopped_at: Completed 02-url-shortener 02-01-PLAN.md — SlugGenerator utility created with pure Dart base62 encoding
+last_updated: "2026-03-27T11:45:42.378Z"
 progress:
   total_phases: 2
   completed_phases: 1
-  total_plans: 4
-  completed_plans: 4
+  total_plans: 8
+  completed_plans: 5
 ---
 
 # Project State
@@ -19,12 +19,12 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-26)
 
 **Core value:** Acortar una URL y que la URL corta redirija correctamente a la original — todo sin depender de servicios externos.
-**Current focus:** Phase 01 — foundation
+**Current focus:** Phase 02 — url-shortener
 
 ## Current Position
 
-Phase: 2
-Plan: Not started
+Phase: 02 (url-shortener) — EXECUTING
+Plan: 2 of 4
 
 ## Performance Metrics
 
@@ -50,6 +50,7 @@ Plan: Not started
 | Phase 01-foundation P01-03 | 2 | 1 tasks | 1 files |
 | Phase 01-foundation P02 | 8 | 2 tasks | 6 files |
 | Phase 01-foundation P04 | 35 | 2 tasks | 3 files |
+| Phase 02-url-shortener P01 | 1 | 1 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -70,6 +71,7 @@ Recent decisions affecting current work:
 - [Phase 01-foundation]: AppLifecycleListener used for server/db shutdown — widget dispose() unreliable on Flutter desktop (flutter/flutter#113220)
 - [Phase 01-foundation]: serverController.start() called before runApp so bound port is known on first UI frame
 - [Phase 01-foundation]: FoundationScreen uses serverController.port (not hardcoded 8080) to correctly reflect port fallback in UI
+- [Phase 02-url-shortener]: SlugGenerator is pure Dart with no imports — deterministic base62 encoding of SQLite row IDs, zero-padded to 6 chars
 
 ### Pending Todos
 
@@ -81,6 +83,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-26T23:15:45.198Z
-Stopped at: Completed 01-foundation 01-04-PLAN.md — Phase 1 Foundation wiring complete; server + DB integrated, FoundationScreen shows live port, human verification passed
+Last session: 2026-03-27T11:45:42.374Z
+Stopped at: Completed 02-url-shortener 02-01-PLAN.md — SlugGenerator utility created with pure Dart base62 encoding
 Resume file: None
