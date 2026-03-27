@@ -11,7 +11,7 @@ Future<void> main() async {
 
   // Start the embedded HTTP server before showing the UI.
   // Port-scan fallback is handled inside ServerController.start().
-  final serverController = ServerController();
+  final serverController = ServerController(database: database);
   try {
     await serverController.start();
   } catch (e) {

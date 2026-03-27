@@ -26,4 +26,12 @@ class UrlDao extends DatabaseAccessor<AppDatabase> with _$UrlDaoMixin {
     return (select(urls)..where((tbl) => tbl.slug.equals(slug)))
         .getSingleOrNull();
   }
+
+  /// Update the slug for a row by its primary key id.
+  /// Used by the shorten handler after inserting with a temporary placeholder.
+  Future<void> updateSlug({required int rowId, required String slug}) {
+    return (update(urls)..where((tbl) => tbl.id.equals(rowId))).write(
+      UrlsCompanion(slug: Value(slug)),
+    );
+  }
 }

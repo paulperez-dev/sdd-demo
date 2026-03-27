@@ -4,6 +4,10 @@ import 'package:shelf/shelf.dart';
 import 'package:shelf/shelf_io.dart' as shelf_io;
 import 'package:shelf_router/shelf_router.dart';
 
+import '../db/database.dart';
+import 'handlers/shorten_handler.dart';
+import 'handlers/redirect_handler.dart';
+
 /// Server lifecycle states surfaced to the UI.
 enum ServerStatus { stopped, starting, running, error }
 
@@ -11,7 +15,6 @@ enum ServerStatus { stopped, starting, running, error }
 ///
 /// Design decisions:
 /// - Binds to 127.0.0.1 (InternetAddress.loopbackIPv4) ONLY — never 0.0.0.0
-///   (binding to 0.0.0.0 would expose the server to the local network)
 /// - Port-scan fallback: tries ports [8080, 8081, 8082] in order
 /// - Wraps HttpServer.bind in try/catch for SocketException (Pitfall 1)
 /// - stop() calls server.close(forceClose: true) (Pitfall 2)
@@ -19,10 +22,14 @@ enum ServerStatus { stopped, starting, running, error }
 class ServerController {
   static const List<int> _candidatePorts = [8080, 8081, 8082];
 
+  final AppDatabase _database;
+
   HttpServer? _server;
   int? _port;
 
   final _statusController = StreamController<ServerStatus>.broadcast();
+
+  ServerController({required AppDatabase database}) : _database = database;
 
   /// Stream of server lifecycle status changes for the UI to observe.
   Stream<ServerStatus> get statusStream => _statusController.stream;
@@ -95,15 +102,34 @@ class ServerController {
     }
   }
 
-  /// Build the shelf request handler.
-  ///
-  /// Foundation phase: minimal handler with a health-check route only.
-  /// URL shortener routes (POST /shorten, GET /[slug]) are added in Phase 2.
+  /// Build the shelf request handler with all Phase 2 routes registered.
   Handler _buildHandler() {
+    // _port is null at this point (before bind); pass a placeholder that
+    // will be replaced after bind. The port is embedded in the shortUrl
+    // response at handler call-time, not at build-time.
+    // Solution: build handler after port is known (called inside start() loop
+    // after a successful _tryBind). We use a late-bound lambda that captures
+    // `this` to access `_port` at call-time.
     final router = Router();
 
     router.get('/health', (Request request) {
       return Response.ok('OK');
+    });
+
+    router.post('/shorten', (Request request) {
+      // Use actual bound port at call-time (not build-time).
+      return makeShortenHandler(_database.urlDao, _port ?? 8080)(request);
+    });
+
+    router.get('/<slug>', (Request request, String slug) {
+      // Inject slug into the request context so makeRedirectHandler can read
+      // it via request.params['slug'] (the RouterParams extension reads from
+      // context['shelf_router/params']).
+      return makeRedirectHandler(_database.urlDao)(
+        request.change(context: {
+          'shelf_router/params': <String, String>{'slug': slug},
+        }),
+      );
     });
 
     // Fallback for unmatched routes.
