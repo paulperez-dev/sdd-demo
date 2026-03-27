@@ -17,10 +17,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### URL Shortening
 
-- [ ] **SHORT-01**: Usuario puede pegar una URL larga en un campo de texto y enviarla
-- [ ] **SHORT-02**: El sistema genera un slug corto único para la URL
+- [x] **SHORT-01**: Usuario puede pegar una URL larga en un campo de texto y enviarla
+- [x] **SHORT-02**: El sistema genera un slug corto único para la URL
 - [ ] **SHORT-03**: La URL original y el slug se persisten en SQLite
-- [ ] **SHORT-04**: La app muestra la URL corta completa (localhost:puerto/slug) al usuario
+- [x] **SHORT-04**: La app muestra la URL corta completa (localhost:puerto/slug) al usuario
 - [ ] **SHORT-05**: Las URLs persisten entre reinicios de la app
 
 ### Redirect
@@ -70,10 +70,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | FOUND-03 | Phase 1 | Complete |
 | FOUND-04 | Phase 1 | Complete |
 | FOUND-05 | Phase 1 | Complete |
-| SHORT-01 | Phase 2 | Pending |
-| SHORT-02 | Phase 2 | Pending |
+| SHORT-01 | Phase 2 | Complete |
+| SHORT-02 | Phase 2 | Complete |
 | SHORT-03 | Phase 2 | Pending |
-| SHORT-04 | Phase 2 | Pending |
+| SHORT-04 | Phase 2 | Complete |
 | SHORT-05 | Phase 2 | Pending |
 | REDIR-01 | Phase 2 | Pending |
 | REDIR-02 | Phase 2 | Pending |
