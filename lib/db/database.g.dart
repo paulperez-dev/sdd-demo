@@ -28,8 +28,8 @@ class $UrlsTable extends Urls with TableInfo<$UrlsTable, Url> {
     aliasedName,
     false,
     additionalChecks: GeneratedColumn.checkTextLength(
-      minTextLength: 5,
-      maxTextLength: 10,
+      minTextLength: 1,
+      maxTextLength: 20,
     ),
     type: DriftSqlType.string,
     requiredDuringInsert: true,

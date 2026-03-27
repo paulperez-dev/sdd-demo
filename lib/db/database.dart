@@ -13,7 +13,7 @@ part 'database.g.dart';
 /// Use auto-increment id and encode to base62 for collision-free slug generation.
 class Urls extends Table {
   IntColumn get id => integer().autoIncrement()();
-  TextColumn get slug => text().withLength(min: 5, max: 10).unique()();
+  TextColumn get slug => text().withLength(min: 1, max: 20).unique()();
   TextColumn get originalUrl => text()();
   DateTimeColumn get createdAt => dateTime().withDefault(currentDateAndTime)();
 }
