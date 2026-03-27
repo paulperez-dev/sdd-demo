@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node:*)",
+      "WebSearch",
+      "WebFetch(domain:pub.dev)",
+      "WebFetch(domain:shlink.io)",
+      "WebFetch(domain:drift.simonbinder.eu)",
+      "WebFetch(domain:dart.dev)",
+      "WebFetch(domain:api.flutter.dev)",
+      "Read(//Users/paulperez/development/sdd-demo/$HOME/Library/Application Support/**)",
+      "Read(//Users/paulperez/development/sdd-demo/$HOME/Library/**)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
+    ]
+  }
+}
